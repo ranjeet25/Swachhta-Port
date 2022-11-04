@@ -1,0 +1,19 @@
+{
+  "name": "swachhta-portal",
+  "version": "1.0.0",
+  "description": "A webapp towards cleanliness",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranjeet25/fourbits_voidhack.git"
+  },
+  "author": "Four Bits",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranjeet25/fourbits_voidhack/issues"
+  },
+  "homepage": "https://github.com/ranjeet25/fourbits_voidhack#readme"
+}
