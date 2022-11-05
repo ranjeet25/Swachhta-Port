@@ -52,6 +52,13 @@
   </head>
 
   <body>
+   <!-- ======= CSS ======= -->
+   <style>
+    #time-modal{
+      padding: 20px;
+    }
+   </style>
+    
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
       <div class="d-flex align-items-center justify-content-between">
@@ -222,7 +229,7 @@
           <!-- Left side columns -->
           <div class="col-lg-8">
             <div class="row">
-              <!-- Sales Card -->
+              <!-- Time Card -->
               <div class="col-xxl-4 col-md-6">
                 <div class="card info-card sales-card">
                   <div class="filter">
@@ -254,18 +261,64 @@
                       <div class="ps-3">
                         <h6>Timing</h6>
                         
-                        
-                        <button type="button"  class="glightbox mt-2 btn btn-outline-success">Set Time</button>
-                      </div>
-                      
+                          <button type="button" class="glightbox mt-2 btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#timemodal">
+                            Set Time
+                          </button>
+                        <!-- MODAL -->
+
+
+                    <div class="modal" id="timemodal">
+                      <div class="modal-dialog">
+                    <div class="modal-content">
+
+                     <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Fill Details below</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-        
+
+                    <!-- Modal body -->
+  <div id="time-modal">
+                      
+  <form>
+    <div class="form-group " >
+    <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
+   
+  </div>
+  <div class="form-group mt-4 " >
+    <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address Code">
+   
+  </div>
+  <div class="form-group mt-4">
+     <label for="exampleInputPassword1">Enter your time</label>
+    <input type="time" class="form-control" id="exampleInputPassword1" placeholder="Enter your time">
+  </div>
+   
+  
+  <button type="submit" class="btn btn-outline-success mt-2">Submit</button>
+</form>
+</div>
+
+                 
+
+                    </div>
+                      </div>
+                      </div>
+
+                      <!-- Modal ends -->
+
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- End Sales Card -->
 
-              <!-- Revenue Card -->
+
+              <!-- End Time Card -->
+
+              <!-- Complain Card -->
               <div class="col-xxl-4 col-md-6">
                 <div class="card info-card revenue-card">
                   <div class="filter">
@@ -299,15 +352,65 @@
                       <div class="ps-3">
                         <h6>Complain</h6>
                       
-                        <button type="button" class=" mt-2 btn btn-outline-success">Complain</button>
+                         <button type="button" class="glightbox mt-2 btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#complainmodal">
+                           Complain
+                          </button>
+                        <!-- MODAL -->
+
+
+                    <div class="modal" id="complainmodal">
+                      <div class="modal-dialog">
+                    <div class="modal-content">
+
+                     <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Enter your Complain below</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+  <div id="time-modal">
+                      
+  <form>
+    <div class="form-group " >
+    <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
+   
+  </div>
+  <div class="form-group mt-4 " >
+    <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address Code">
+   
+  </div>
+  <div class="form-group mt-4">
+     
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter nearest  collector">
+  </div>
+  <div class="form-group mt-4">
+    <label for="exampleFormControlFile1">Select file input for proof</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+   
+  
+  <button type="submit" class="btn btn-outline-success mt-4">Submit</button>
+</form>
+</div>
+
+                 
+
+                    </div>
+                      </div>
+                      </div>
+
+                      <!-- Modal ends -->
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- End Revenue Card -->
+              <!-- End Complain Card -->
 
-              <!-- Customers Card -->
+              <!-- Schedule Card -->
               <div class="col-xxl-4 col-xl-12">
                 <div class="card info-card customers-card">
                   <div class="filter">
@@ -341,13 +444,72 @@
                       <div class="ps-3">
                         <h6>Schedule</h6>
                       
-                        <button type="button" class=" mt-2 btn btn-outline-success">Request</button>
+                        <button type="button" class="glightbox mt-2 btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#schedulemodal">
+                           Schedule
+                          </button>
+                        <!-- MODAL -->
+
+
+                    <div class="modal" id="schedulemodal">
+                      <div class="modal-dialog">
+                    <div class="modal-content">
+
+                     <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Fill details to Request on demand collection</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+  <div id="time-modal">
+                      
+  <form>
+    <div class="form-group " >
+    <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
+    <input type="text" class="form-control" id="sname" aria-describedby="emailHelp" placeholder="Enter Your Name">
+   
+  </div>
+  <div class="form-group mt-4 " >
+    <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
+    <input type="email" class="form-control" id="saddress" aria-describedby="emailHelp" placeholder="Enter Address Code">
+   
+  </div>
+   <div class="form-group mt-4 " >
+    <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
+    <input type="text" class="form-control" id="swieght" aria-describedby="emailHelp" placeholder="Enter Approx Waste weight">
+   
+  </div>
+  <div class="form-group mt-4 " >
+     <label for="exampleInputEmail1">Enter date of pickup</label>
+    <input type="date" class="form-control" id="sdate" aria-describedby="emailHelp" placeholder="Select date">
+   
+  </div>
+   <div class="form-group mt-4 " >
+     <label for="exampleInputEmail1">Enter time for pickup</label>
+    <input type="time" class="form-control" id="stime" aria-describedby="emailHelp" placeholder="Select time">
+   
+  </div>
+  
+  
+  <button type="submit" class="btn btn-outline-success mt-4">Submit</button>
+</form>
+</div>
+
+                 
+
+                    </div>
+                      </div>
+                      </div>
+
+                      <!-- Modal ends -->
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- End Customers Card -->
+
+
+              <!-- End Schedule Card -->
 
               <!-- Reports -->
               <div class="col-12">
@@ -370,7 +532,7 @@
                   </div>
 
                   <div class="card-body">
-                    <h5 class="card-title">Reports <span>/Today</span></h5>
+                    <h5 class="card-title">What is on demand Pickup ? <span>/Info</span></h5>
 
                    
                     <!-- End Line Chart -->
