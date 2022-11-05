@@ -202,7 +202,7 @@
         <li class="nav-item">
           <a class="nav-link collapsed" href="#">
             <i class="bi bi-dash-circle"></i>
-            <span>Transfer center</span>
+            <span>My Requests</span>
           </a>
         </li>
         <!-- End Error 404 Page Nav -->
@@ -288,7 +288,7 @@
   </div>
   <div class="form-group mt-4 " >
     <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address Code">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address Code">
    
   </div>
   <div class="form-group mt-4">
@@ -379,7 +379,7 @@
   </div>
   <div class="form-group mt-4 " >
     <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address Code">
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address Code">
    
   </div>
   <div class="form-group mt-4">
@@ -392,7 +392,7 @@
   </div>
    
   
-  <button type="submit" class="btn btn-outline-success mt-4">Submit</button>
+  <button onclick="uploadImage()" type="submit" class="btn btn-outline-success mt-4">Submit</button>
 </form>
 </div>
 
@@ -471,7 +471,7 @@
   </div>
   <div class="form-group mt-4 " >
     <!-- <label for="exampleInputEmail1">Enter Address Code</label> -->
-    <input type="email" class="form-control" id="saddress" aria-describedby="emailHelp" placeholder="Enter Address Code">
+    <input type="text" class="form-control" id="saddress" aria-describedby="emailHelp" placeholder="Enter Address Code">
    
   </div>
    <div class="form-group mt-4 " >
@@ -533,6 +533,10 @@
 
                   <div class="card-body">
                     <h5 class="card-title">What is on demand Pickup ? <span>/Info</span></h5>
+                    <p>On demand pickup is a facility that can be similar like ordering foods on zomato. Here we ensure that the waste will be collected within the time provide by the demander.</p>
+                    <li>Demand a pickup</li>
+                    <li>Enter  your waste details</li>
+                    <li>Pay charges as mimimum as possible</li>
 
                    
                     <!-- End Line Chart -->
@@ -679,5 +683,75 @@
 
     <!-- Template Main JS File -->
     <script src="dashboard-assets/js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+  
+    <script>
+         const firebaseConfig = {
+      apiKey: "AIzaSyDSpax2EJjHLgvV5UcVg9uylzjVyxbqOOg",
+      authDomain: "auth-74405.firebaseapp.com",
+      projectId: "auth-74405",
+      storageBucket: "auth-74405.appspot.com",
+      messagingSenderId: "553824903425",
+      appId: "1:553824903425:web:08e5a0fb431cb635443b00",
+      measurementId: "G-4VPF7Z06ZX"
+    };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      console.log(firebase);
+  
+      function uploadImage() {
+        const ref = firebase.storage().ref();
+        const file = document.querySelector("#exampleFormControlFile1").files[0];
+        const name = +new Date() + "-" + file.name;
+        const metadata = {
+          contentType: file.type
+        };
+        const task = ref.child(name).put(file, metadata);
+        task
+          .then(snapshot => snapshot.ref.getDownloadURL())
+          .then(url => {
+            console.log(url);
+            document.querySelector("#image").src = url;
+          })
+          .catch(console.error);
+      }
+  
+  
+  const errorMsgElement = document.querySelector('span#errorMsg');
+  
+  
+  
+  // Access webcam
+  
+  
+  // Success
+  
+  
+  // Load init
+  
+  
+  // Draw image
+  var context = canvas.getContext('2d');
+  snap.addEventListener("click", function() {
+      context.drawImage(video, 0, 0, 640, 480);
+      var image = new Image();
+  image.id = "pic";
+  image.src = canvas.toDataURL();
+  console.log(image.src)
+  var button = document.createElement('button')
+  button.textContent = 'Upload Image'
+  document.body.appendChild(button)
+  
+  button.onclick = function() {
+      const ref = firebase.storage().ref();
+      ref.child(new Date() + '-' + 'base64').putString(image.src, 'data_url').then(function(snapshot) {
+      console.log('Uploaded a data_url string!');
+      alert("Image Uploaded")
+  });
+  }
+  });
+    </script>
+   
   </body>
 </html>
