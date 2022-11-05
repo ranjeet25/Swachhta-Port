@@ -58,6 +58,20 @@ form .input-box input {
   transition: all 0.3s ease;
 }
 
+#block-input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #c7bebe;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
 #role-input {
   height: 100%;
   width: 100%;

@@ -11,12 +11,18 @@
   <body>
     <div class="wrapper">
       <h2>Registration</h2>
-      <form action="#">
+      <form action="#" method="post">
         <div class="input-box">
-          <input type="text" placeholder="Enter your name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
         </div>
         <div class="input-box">
-          <select name="role" id="block-input">
+          <select name="block" id="block-input">
             <option value="gotnull">Select your Block</option>
             <option value="North A">North A</option>
             <option value="North B">North B</option>
@@ -28,20 +34,37 @@
         </div>
         <div class="input-box">
           <select name="role" id="role-input">
-            <option value="">Select your role</option>
+            <option value="gotnull">Select your role</option>
             <option value="Citizen">Citizen</option>
             <option value="Commercial">Commercial</option>
             <option value="Industrialist">Industrialist</option>
           </select>
         </div>
         <div class="input-box">
-          <input type="email" placeholder="Enter your Email" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your Email"
+          />
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Create password" required />
+          <input
+            type="password"
+            name="psw"
+            id="psw"
+            placeholder="Create password"
+            required
+          />
         </div>
         <div class="input-box">
-          <input type="password" placeholder="Confirm password" required />
+          <input
+            type="password"
+            name="psw"
+            id="psw"
+            placeholder="Confirm password"
+            required
+          />
         </div>
         <div class="policy">
           <input type="checkbox" />
@@ -49,9 +72,9 @@
         </div>
         <div class="input-box button">
           <input
+            type="Submit"
             id="submitData"
             name="submitData"
-            type="Submit"
             value="Register Now"
           />
         </div>
@@ -64,7 +87,6 @@
     </div>
   </body>
 </html>
-
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
