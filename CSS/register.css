@@ -58,7 +58,7 @@ form .input-box input {
   transition: all 0.3s ease;
 }
 
-#block-input {
+#block {
   height: 100%;
   width: 100%;
   outline: none;
@@ -72,7 +72,7 @@ form .input-box input {
   transition: all 0.3s ease;
 }
 
-#role-input {
+#role {
   height: 100%;
   width: 100%;
   outline: none;
@@ -98,6 +98,18 @@ form h3 {
   font-size: 14px;
   font-weight: 500;
   margin-left: 10px;
+}
+.registerbtn {
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: #06d6a0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.registerbt:hover {
+  background: #02a57a;
 }
 .input-box.button input {
   color: #fff;

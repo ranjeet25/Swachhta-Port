@@ -22,7 +22,7 @@
           />
         </div>
         <div class="input-box">
-          <select name="role" id="block-input">
+          <select name="role" id="block">
             <option value="Null">Select your Block</option>
             <option value="Citizen">North A</option>
             <option value="Commercial">North B</option>
@@ -33,7 +33,7 @@
           </select>
         </div>
         <div class="input-box">
-          <select name="role" id="role-input">
+          <select name="role" id="role">
             <option value="">Select your role</option>
             <option value="Citizen">Citizen</option>
             <option value="Commercial">Commercial</option>
@@ -72,7 +72,7 @@
         </div>
         <div class="input-box button">
           <button
-            type="submit"
+            type="button"
             id="submitData"
             name="submitData"
             class="registerbtn"
@@ -127,8 +127,8 @@
     var email = document.getElementById("email").value;
     var password = document.getElementById("psw").value;
     var name = document.getElementById("name").value;
-    var role = document.getElementById("role-input").value;
-    var block = document.getElementById("block-input").value;
+    var role = document.getElementById("role").value;
+    var block = document.getElementById("block").value;
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
